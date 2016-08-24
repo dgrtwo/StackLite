@@ -35,7 +35,7 @@ This is all public data within the [Stack Exchange Data Dump](https://archive.or
 s <- yaml.load_file("status.yml")
 ```
 
-This dataset was extracted from the Stack Overflow database at 2016-08-17 17:29:20 UTC and contains questions up to **2016-08-16**. This includes 12248066 non-deleted questions, and  3510466 deleted ones. (The script for downloading the data can be found in [setup-data.R](setup-data.R), though it can be run only by Stack Overflow employees with database access).
+This dataset was extracted from the Stack Overflow database at 2016-08-23 19:50:34 UTC and contains questions up to **2016-08-22**. This includes 12248066 non-deleted questions, and  3510466 deleted ones. (The script for downloading the data can be found in [setup-data.R](setup-data.R), though it can be run only by Stack Overflow employees with database access).
 
 ### Examples in R
 

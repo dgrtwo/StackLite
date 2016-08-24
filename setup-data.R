@@ -61,3 +61,7 @@ system("gzip questions.csv")
 
 write_csv(question_tags, "question_tags.csv")
 system("gzip question_tags.csv")
+
+# knit the README
+library(knitr)
+knit("README.Rmd")
