@@ -44,11 +44,7 @@ questions <- read_csv("questions.csv.gz", progress = FALSE)
 question_tags <- read_csv("question_tags.csv.gz", progress = FALSE)
 ```
 
-```{r cache = FALSE}
-s <- yaml.load_file("status.yml")
-```
-
-This dataset was extracted from the Stack Overflow database at `r s$retrieved_time` UTC and contains questions up to **`r s$max_date`**. This includes `r sum(is.na(questions$DeletionDate))` non-deleted questions, and  `r sum(!is.na(questions$DeletionDate))` deleted ones. (The script for downloading the data can be found in [setup-data.R](setup-data.R), though it can be run only by Stack Overflow employees with database access).
+This dataset was extracted from the Stack Overflow database at `r yaml.load_file("status.yml")$retrieved_time` UTC and contains questions up to **`r yaml.load_file("status.yml")$max_date`**. This includes `r sum(is.na(questions$DeletionDate))` non-deleted questions, and  `r sum(!is.na(questions$DeletionDate))` deleted ones. (The script for downloading the data can be found in [setup-data.R](setup-data.R), though it can be run only by Stack Overflow employees with database access).
 
 ### Examples in R
 
