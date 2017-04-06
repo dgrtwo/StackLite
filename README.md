@@ -30,7 +30,7 @@ This is all public data within the [Stack Exchange Data Dump](https://archive.or
 
 
 
-This dataset was extracted from the Stack Overflow database at 2016-10-13 18:09:48 UTC and contains questions up to **2016-10-12**. This includes 12583347 non-deleted questions, and  3654954 deleted ones. (The script for downloading the data can be found in [setup-data.R](setup-data.R), though it can be run only by Stack Overflow employees with database access).
+This dataset was extracted from the Stack Overflow database at 2017-04-06 16:39:26 UTC and contains questions up to **2017-04-05**. This includes 13629741 non-deleted questions, and  4133745 deleted ones. (The script for downloading the data can be found in [setup-data.R](setup-data.R), though it can be run only by Stack Overflow employees with database access).
 
 ### Examples in R
 
@@ -53,20 +53,20 @@ questions
 ```
 
 ```
-## # A tibble: 16,238,301 × 7
+## # A tibble: 17,763,486 × 7
 ##       Id        CreationDate          ClosedDate        DeletionDate Score
 ##    <int>              <dttm>              <dttm>              <dttm> <int>
 ## 1      1 2008-07-31 21:26:37                <NA> 2011-03-28 00:53:47     1
-## 2      4 2008-07-31 21:42:52                <NA>                <NA>   427
-## 3      6 2008-07-31 22:08:08                <NA>                <NA>   194
+## 2      4 2008-07-31 21:42:52                <NA>                <NA>   472
+## 3      6 2008-07-31 22:08:08                <NA>                <NA>   210
 ## 4      8 2008-07-31 23:33:19 2013-06-03 04:00:25 2015-02-11 08:26:40    42
-## 5      9 2008-07-31 23:40:59                <NA>                <NA>  1333
-## 6     11 2008-07-31 23:55:37                <NA>                <NA>  1084
-## 7     13 2008-08-01 00:42:38                <NA>                <NA>   433
-## 8     14 2008-08-01 00:59:11                <NA>                <NA>   276
-## 9     16 2008-08-01 04:59:33                <NA>                <NA>    69
-## 10    17 2008-08-01 05:09:55                <NA>                <NA>   104
-## # ... with 16,238,291 more rows, and 2 more variables: OwnerUserId <int>,
+## 5      9 2008-07-31 23:40:59                <NA>                <NA>  1452
+## 6     11 2008-07-31 23:55:37                <NA>                <NA>  1154
+## 7     13 2008-08-01 00:42:38                <NA>                <NA>   464
+## 8     14 2008-08-01 00:59:11                <NA>                <NA>   296
+## 9     16 2008-08-01 04:59:33                <NA>                <NA>    84
+## 10    17 2008-08-01 05:09:55                <NA>                <NA>   119
+## # ... with 17,763,476 more rows, and 2 more variables: OwnerUserId <int>,
 ## #   AnswerCount <int>
 ```
 
@@ -75,7 +75,7 @@ question_tags
 ```
 
 ```
-## # A tibble: 47,713,261 × 2
+## # A tibble: 52,224,835 × 2
 ##       Id                 Tag
 ##    <int>               <chr>
 ## 1      1                data
@@ -88,7 +88,7 @@ question_tags
 ## 8      6                 css
 ## 9      6                css3
 ## 10     6 internet-explorer-7
-## # ... with 47,713,251 more rows
+## # ... with 52,224,825 more rows
 ```
 
 As one example, you could find the most popular tags:
@@ -100,20 +100,20 @@ question_tags %>%
 ```
 
 ```
-## # A tibble: 56,798 × 2
+## # A tibble: 59,140 × 2
 ##           Tag       n
 ##         <chr>   <int>
-## 1  javascript 1540123
-## 2        java 1474705
-## 3         php 1296218
-## 4          c# 1258269
-## 5     android 1219858
-## 6      jquery  967536
-## 7      python  782220
-## 8        html  728505
-## 9         ios  602047
-## 10        c++  594281
-## # ... with 56,788 more rows
+## 1  javascript 1712324
+## 2        java 1614786
+## 3         php 1406127
+## 4          c# 1356681
+## 5     android 1327680
+## 6      jquery 1035978
+## 7      python  898647
+## 8        html  804340
+## 9         ios  652484
+## 10        c++  645197
+## # ... with 59,130 more rows
 ```
 
 Or plot the number of questions asked per week:
